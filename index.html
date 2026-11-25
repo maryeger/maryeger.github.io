@@ -330,24 +330,44 @@
       <p class="bottom-note">сделано с горем пополам и с божьей помощью ✦ 2026</p>
     </section>
 
-    <!-- На компьютере иконки расположены по бокам, на телефоне — одной линией -->
-    <nav class="socials" aria-label="Мои социальные сети">
-      <a class="social-link" href="https://steamcommunity.com/profiles/76561198607375630/" target="_blank" rel="noopener noreferrer" aria-label="Steam" title="Steam">
-        <img src="assets/icons/steam.png" alt="">
-      </a>
-      <a class="social-link" href="https://instagram.com/nepr1ncess" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
-        <img src="assets/icons/instagram.png" alt="">
-      </a>
-      <a class="social-link" href="https://www.tiktok.com/@maryegerr" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
-        <img src="assets/icons/tiktok.png" alt="">
-      </a>
-      <a class="social-link" href="https://t.me/nemaryeg" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram">
-        <img src="assets/icons/telegram.png" alt="">
-      </a>
-      <a class="social-link" href="https://discord.com/users/1126013531494563922" target="_blank" rel="noopener noreferrer" aria-label="Discord" title="Discord">
-        <img src="assets/icons/discord.png" alt="">
-      </a>
-    </nav>
-  </main>
-</body>
-</html>
+   /* РАСПОЛОЖЕНИЕ СОЦСЕТЕЙ — DESKTOP */
+@media (min-width: 769px) {
+
+  .social-link {
+    position: fixed !important;
+    width: 100px !important;
+    height: 100px !important;
+    padding: 12px !important;
+    z-index: 10;
+  }
+
+  /* STEAM — слева сверху */
+  .social-link[href*="steamcommunity"] {
+    left: 17% !important;
+    top: 25% !important;
+  }
+
+  /* TIKTOK — справа сверху */
+  .social-link[href*="tiktok"] {
+    right: 17% !important;
+    top: 25% !important;
+  }
+
+  /* INSTAGRAM — слева снизу */
+  .social-link[href*="instagram"] {
+    left: 13% !important;
+    top: 62% !important;
+  }
+
+  /* TELEGRAM — справа посередине */
+  .social-link[href*="t.me"] {
+    right: 13% !important;
+    top: 52% !important;
+  }
+
+  /* DISCORD — справа внизу */
+  .social-link[href*="discord"] {
+    right: 19% !important;
+    top: 79% !important;
+  }
+}
